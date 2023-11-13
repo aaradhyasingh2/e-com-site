@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 15px 80px;
+  justify-content: space-between;
+  /* box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.25); */
+  box-shadow: 0 7px 6px -1px rgba(0, 0, 0, 0.25);
+}
+.logotxt {
+  font-size: 30px;
+  font-family: monospace;
+  /* font-weight: 500; */
+}
+.logotxt a {
+  color: red;
+  text-decoration: none;
+}
+.navlink {
+  gap: 45px;
+  display: flex;
+  flex-direction: row;
+}
+.navlink a {
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+}
+.cartarea {
+  gap: 30px;
+  display: flex;
+  /* justify-content: space-between; */
+}
+.cartarea button {
+  color: black;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 8px 35px;
+  border-radius: 55px;
+}
+.cartarea p {
+  font-size: 20px;
+  padding-top: 8px;
+}
+.menubar,
+.closeMenuBar {
+  display: none;
+}
+
+/* responsive code for navbar */
+@media (max-width: 900px) {
+  .container {
+    padding: 15px 25px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 15px 29px;
+  }
+  .navlink {
+    gap: 30px;
+  }
+}
+@media (max-width: 680px) {
+  .container {
+    padding: 15px 12px;
+  }
+  .cartarea {
+    gap: 10px;
+  }
+  .navlink {
+    gap: 15px;
+  }
+}
+@media (max-width: 550px) {
+  .container {
+    padding: 15px 15px;
+  }
+  .navlink {
+    gap: 12px;
+  }
+}
+@media (max-width: 520px) {
+  .navlink {
+    gap: 10px;
+  }
+  .cartarea button {
+    font-size: 15px;
+    font-weight: 400;
+    padding: 5px 15px;
+    border-radius: 55px;
+  }
+}
+@media (max-width: 470px) {
+  .container {
+    padding: 15px 10px;
+  }
+  .navlink {
+    /* display: none; */
+    gap: 8px;
+    padding: 0px 5px;
+  }
+}
+@media (max-width: 450px) {
+  .container {
+    padding: 15px 20px;
+  }
+  .navlink {
+    display: none;
+  }
+  .cartarea button {
+    color: black;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 8px 30px;
+    border-radius: 55px;
+  }
+  .menuBar {
+    display: block;
+  }
+  .cartarea {
+    gap: 10px;
+  }
+  /* .closeMenuBar {
+    display: block;
+  } */
+}
