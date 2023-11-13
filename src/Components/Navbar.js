@@ -18,8 +18,8 @@ const Navbar = () => {
           <button>Login</button>
           <p><FontAwesomeIcon icon={faShoppingCart} />
           </p>
-        <p className='menuBar'><FontAwesomeIcon icon={faBars}/></p>
-        <p className='closeMenuBar'><FontAwesomeIcon icon={faClose}/></p>
+          <p className='menuBar'><FontAwesomeIcon icon={faBars} /></p>
+          <p className='closeMenuBar'><FontAwesomeIcon icon={faClose} /></p>
         </div>
       </div>
     </>
