@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/eCom.css';
+import './css/eCom.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAmazon, faFacebook, faInstagram, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
@@ -8,15 +8,16 @@ const Footer = () => {
         <>
             <div className="footerMain">
                 <div className="footer1">
-                    <h5>Our eComm <br /> site</h5>
+                    <h5>Our eCom</h5>
                     <input type="text" placeholder='enter your email' />
                     <button>Subscribe</button>
-                    <p>Get monthly updates and free resources.</p>
+                    {/* <br /> <br /> <br /> */}
+                    <p>To get monthly updates.</p>
                 </div>
                 <div className="footer2">
                     <h5>Links</h5>
                     <ul>
-                        <a href="#">eComm</a>
+                        <a href="#">eCom</a>
                         <a href="#">Products</a>
                         <a href="#">Contact Us</a>
                         <a href="#">Social Media</a>
@@ -32,16 +33,20 @@ const Footer = () => {
                 </div>
                 <div className="footer4">
                     <h5>Contact Us</h5>
+                    <ul>
                     <p>Phone no: +91 412798436</p>
                     <p>Email: eComm@gmail.com</p>
-                    <p>Address: 1234 Street Name City, AA 99999</p>
+                    <p>Address: 1234 Street Name City, XY 8888</p>
+                    </ul>
                 </div>
                 <div className="socialMediaFooter">
-                <FontAwesomeIcon icon={faFacebook}/>
-                <FontAwesomeIcon icon={faInstagram}/>
-                <FontAwesomeIcon icon={faTwitter}/>
-                <FontAwesomeIcon icon={faYoutube}/>
-                <FontAwesomeIcon icon={faAmazon}/>
+                    <p><FontAwesomeIcon icon={faFacebook} /></p>
+                    <p><FontAwesomeIcon icon={faInstagram} />
+                    </p>
+                    <p><FontAwesomeIcon icon={faTwitter} /></p>
+                    <p><FontAwesomeIcon icon={faYoutube} />
+                    </p>
+                    <p><FontAwesomeIcon icon={faAmazon} /></p>
                 </div>
             </div>
         </>

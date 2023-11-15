@@ -1,0 +1,687 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+/* Navbar CSS */
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 15px 80px;
+  justify-content: space-between;
+  /* box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.25); */
+  box-shadow: 0 7px 6px -1px rgba(0, 0, 0, 0.25);
+}
+.logotxt {
+  font-size: 30px;
+  font-family: monospace;
+  /* font-weight: 500; */
+}
+.logotxt a {
+  color: red;
+  text-decoration: none;
+}
+.navlink {
+  gap: 45px;
+  display: flex;
+  flex-direction: row;
+}
+.navlink a {
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+}
+.cartarea {
+  gap: 30px;
+  display: flex;
+  /* justify-content: space-between; */
+}
+.cartarea button {
+  color: black;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 8px 35px;
+  border-radius: 55px;
+}
+.cartarea p {
+  font-size: 20px;
+  padding-top: 8px;
+}
+.menuBar,
+.closeMenuBar {
+  display: none;
+}
+
+/* responsive code for navbar */
+@media (max-width: 900px) {
+  .container {
+    padding: 15px 25px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 15px 29px;
+  }
+  .navlink {
+    gap: 30px;
+  }
+}
+@media (max-width: 680px) {
+  .container {
+    padding: 15px 12px;
+  }
+  .cartarea {
+    gap: 10px;
+  }
+  .navlink {
+    gap: 15px;
+  }
+}
+@media (max-width: 550px) {
+  .container {
+    padding: 15px 15px;
+  }
+  .navlink {
+    gap: 12px;
+  }
+}
+@media (max-width: 520px) {
+  .navlink {
+    gap: 10px;
+  }
+  .cartarea button {
+    font-size: 15px;
+    font-weight: 400;
+    padding: 5px 15px;
+    border-radius: 55px;
+  }
+}
+@media (max-width: 470px) {
+  .container {
+    padding: 15px 25px;
+  }
+  .navlink {
+    display: none;
+    /* gap: 6px; */
+    /* padding: 0px 5px; */
+  }
+  .menuBar {
+    display: block;
+  }
+}
+@media (max-width: 450px) {
+  .container {
+    padding: 15px 20px;
+  }
+  .navlink {
+    display: none;
+  }
+  .cartarea button {
+    color: black;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 8px 30px;
+    border-radius: 55px;
+  }
+  .menuBar {
+    display: block;
+  }
+  .cartarea {
+    gap: 10px;
+  }
+  /* .closeMenuBar {
+      display: block;
+    } */
+}
+
+/* Footer CSS */
+
+.footerMain {
+  height: 300px;
+  width: 100%;
+  color: white;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  background-color: black;
+  justify-content: space-between;
+  padding: 0px 50px;
+  /* padding-bottom: 30px; */
+  /* margin-top: 450px;*/
+}
+.footer1 {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.footer1 h5 {
+  font-size: 20px;
+  font-weight: 500;
+  border-bottom-style: groove;
+  border-bottom: 2px solid red;
+  padding-bottom: 5px;
+  /* padding-bottom: 15px; */
+}
+.footer1 input {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  width: 100%;
+  outline: none;
+}
+.footer1 button {
+  border: none;
+  border-radius: 5px;
+  padding: 6px 10px;
+}
+.footer2 h5 {
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-bottom: 2px solid red;
+  border-bottom-style: groove;
+  padding-bottom: 5px;
+}
+.footer2 ul {
+  margin-top: 5px;
+}
+.footer2 ul a {
+  display: flex;
+  color: white;
+  text-decoration: none;
+  flex-direction: column;
+}
+.footer3 h5 {
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-bottom-style: groove;
+  border-bottom: 2px solid red;
+  padding-bottom: 5px;
+}
+.footer3 ul {
+  margin-top: 5px;
+}
+.footer3 ul a {
+  color: white;
+  /* line-height: 2; */
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+.footer4 {
+  display: flex;
+  color: white;
+  flex-direction: column;
+  text-decoration: none;
+}
+.footer4 h5 {
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-bottom: 2px solid red;
+  border-bottom-style: groove;
+  padding-bottom: 5px;
+  width: 130px;
+}
+.footer4 ul {
+  margin-top: 5px;
+}
+.socialMediaFooter {
+  gap: 5px;
+  display: flex;
+  font-size: 25px;
+  margin-top: 45px;
+  margin-bottom: 10px;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  /* justify-content: flex-start; */
+}
+.socialMediaFooter p:hover {
+  cursor: pointer;
+  color: orangered;
+}
+.footermiddiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* responsive css for footer */
+
+@media (max-width: 1024px) {
+  .footerMain {
+    padding: 0px 30px;
+    gap: 80px;
+  }
+  /* .socialMediaFooter {
+    margin-top: 40px;
+    gap: 1pc;
+    margin-bottom: 20px;
+  } */
+}
+
+@media (max-width: 920px) {
+  .footerMain {
+    padding: 0px 30px;
+    /* gap: 3pc; */
+  }
+  /* .socialMediaFooter {
+    gap: 1pc;
+    padding: 0px 30px;
+  } */
+  .footer1 p {
+    font-size: 10.5px;
+  }
+  .footer1 button {
+    border: none;
+    border-radius: 5px;
+    padding: 4px 6px;
+    font-size: 11px;
+  }
+  .footer1 input {
+    width: 130%;
+    padding: 4px 6px;
+    font-size: 11px;
+  }
+  .footer2 ul {
+    margin-top: 5px;
+  }
+  .footer3 ul {
+    margin-top: 5px;
+  }
+  .footer3 h5 {
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-bottom-style: groove;
+    border-bottom: 2px solid red;
+    /* padding-bottom: 5px;*/
+  }
+  .footer4 ul {
+    margin-top: 5px;
+  }
+  .footer4 h5 {
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-bottom: 2px solid red;
+    border-bottom-style: groove;
+    /* padding-bottom: 5px; */
+    width: 95px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footerMain {
+    width: 100%;
+    height: 326px;
+    color: white;
+    gap: 85px;
+    padding: 0px 17px;
+    background-color: #464242;
+  }
+  .footer1 h5 {
+    font-size: 16px;
+    width: 95px;
+  }
+  .footer1 input {
+    font-size: 10px;
+    width: 140%;
+  }
+  .footer1 button {
+    padding: 5px 8px;
+    font-size: 10px;
+  }
+  .footer1 p {
+    font-size: 11px;
+    padding: 5px;
+  }
+  .footer2 h5 {
+    font-size: 18px;
+    font-weight: 500;
+    width: 60px;
+    text-transform: uppercase;
+    border-bottom: 2px solid red;
+    border-bottom-style: groove;
+    /* padding-bottom: 5px; */
+  }
+  .footer2 ul {
+    margin-top: 7px;
+    width: 100px;
+  }
+  .footer3 {
+    font-size: 14px;
+    width: 80px;
+  }
+  .footer3 h5 {
+    font-size: 18px;
+    font-weight: 500;
+    width: 60px;
+    text-transform: uppercase;
+    border-bottom: 2px solid red;
+    border-bottom-style: groove;
+    /* /* padding-bottom: 5px; */
+  }
+  .footer3 ul {
+    margin-top: 7px;
+    width: 100px;
+  }
+  .socialMediaFooter {
+    top: 100px;
+    position: relative;
+    flex-direction: row;
+    gap: 27px;
+    right: 587px;
+  }
+}
+
+@media (max-width: 675px) {
+  .footerMain {
+    padding: 0px 35px;
+    /* height: 0px; */
+    gap: 60px;
+  }
+}
+
+@media (max-width: 620px) {
+  .footerMain {
+    padding: 0px 25px;
+    gap: 50px;
+    /* height: 0px; */
+  }
+  .socialMediaFooter {
+    /* top: 100px; */
+    position: relative;
+    flex-direction: row;
+    gap: 15px;
+    right: 587px;
+    display: flex;
+    font-size: 18px;
+    /* margin-top: 45px; */
+    /* margin-bottom: 10px; */
+    /* align-items: flex-start; */
+    /* justify-content: flex-start; */
+  }
+}
+
+@media (max-width: 580px) {
+  .footerMain {
+    padding: 0px 20px;
+    gap: 40px;
+  }
+  .footer4 {
+    display: flex;
+    color: white;
+    flex-direction: column;
+    text-decoration: none;
+    /* font-size: 15px; */
+  }
+  .footer1 input {
+    width: 100%;
+    padding: 6px 5px;
+  }
+  .socialMediaFooter {
+    /* top: 100px; */
+    position: relative;
+    flex-direction: row;
+    /* gap: 35px; */
+    right: 500px;
+    display: flex;
+    font-size: 18px;
+    /* margin-top: 45px; */
+    /* margin-bottom: 10px; */
+    /* align-items: flex-start; */
+    /* justify-content: flex-start; */
+  }
+}
+
+@media (max-width: 540px) {
+  .footerMain {
+    padding: 0px 13px;
+    gap: 35px;
+  }
+}
+
+@media (max-width: 520px) {
+  .footerMain {
+    padding: 0px 9px;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 425px) {
+  .container {
+    padding: 15px 12px;
+  }
+  .cartarea button {
+    color: black;
+    font-size: 12px;
+    /* font-weight: 400; */
+    padding: 0px 18px;
+    border-radius: 50px;
+  }
+  .cartarea {
+    gap: 15px;
+  }
+  .footerMain {
+    width: 100%;
+    height: 100vh;
+    color: white;
+    display: flex;
+    padding: 15px 35px;
+    gap: 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #464242;
+  }
+  .footer1 input {
+    width: 100%;
+    padding: 7px 11px;
+    font-size: 12px;
+  }
+  .footer1 h5 {
+    font-size: 18px;
+    width: 100px;
+    padding-bottom: 0px;
+  }
+  .footer1 p {
+    font-size: 12px;
+    /* padding-top: 6px; */
+    padding-bottom: 8px;
+  }
+  .footer1 button {
+    padding: 7px 10px;
+    font-size: 11px;
+  }
+  .footer2 h5 {
+    width: 70px;
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 0px;
+    text-transform: uppercase;
+    border-bottom: 2px solid red;
+    border-bottom-style: groove;
+  }
+  .footer2 ul {
+    margin: 10px 0px;
+  }
+  .footer3 {
+    /* font-size: 0px; */
+    width: 150px;
+  }
+  .footer3 ul {
+    margin: 8px 0px;
+  }
+  .footer3 h5 {
+    font-size: 18px;
+    font-weight: 500;
+    width: 140px;
+    text-transform: uppercase;
+    border-bottom: 2px solid red;
+    border-bottom-style: groove;
+  }
+  .footer4 {
+    margin: 8px 0px;
+  }
+  .footer4 ul {
+    margin: 8px 0px;
+  }
+  .footer4 h5 {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-bottom: 2px solid red;
+    border-bottom-style: groove;
+    /* padding-bottom: 5px; */
+    width: 125px;
+  }
+  .socialMediaFooter {
+    top: -25px;
+    right: 0px;
+    gap: 12px;
+    position: relative;
+    flex-direction: row;
+    display: flex;
+    font-size: 25px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+@media (max-width: 490px) {
+  .footerMain {
+    padding: 0px 5px;
+    gap: 19px;
+  }
+  .socialMediaFooter {
+    /* top: 100px; */
+    position: relative;
+    flex-direction: row;
+    /* gap: 35px; */
+    right: 462px;
+    display: flex;
+    font-size: 18px;
+    /* margin-top: 45px; */
+    /* margin-bottom: 10px; */
+    /* align-items: flex-start; */
+    /* justify-content: flex-start; */
+  }
+}
+
+@media (max-width: 465px) {
+  .footerMain {
+    padding: 0px 5px;
+    gap: 12px;
+  }
+  .socialMediaFooter {
+    /* top: 100px; */
+    position: relative;
+    flex-direction: row;
+    /* gap: 35px; */
+    right: 340px;
+    display: flex;
+    font-size: 18px;
+    /* margin-top: 45px; */
+    /* margin-bottom: 10px; */
+    /* align-items: flex-start; */
+    /* justify-content: flex-start; */
+  }
+}
+
+@media (max-width: 236px) {
+  .cartarea button {
+    display: none;
+  }
+  .footerMain {
+    width: 100%;
+    height: 100vh;
+    color: white;
+    display: flex;
+    padding: 10px 9px;
+    gap: 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #464242;
+  }
+  .footer4 {
+    margin: 5px 0px;
+  }
+  .footer1 button {
+    padding: 6px 8px;
+  }
+  .footer1 input {
+    width: 100%;
+    padding: 5px 6px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 426px) {
+  .footerMain{
+    padding: 19px 24px;
+    gap: 10px;
+  }
+  .socialMediaFooter {
+    top: -10px;
+    position: relative;
+    flex-direction: row;
+    right: revert;
+    display: flex;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 375px) {
+  .footerMain {
+    padding: 25px 30px;
+    gap: 12px;
+  }
+  .socialMediaFooter {
+    top: -20px;
+    position: relative;
+    flex-direction: row;
+    right: revert;
+    display: flex;
+    font-size: 18px;
+  }
+}
+@media (max-width: 250px) {
+  .cartarea button {
+    display: none;
+  }
+  .footerMain {
+    padding: 15px 19px;
+    gap: 10px;
+  }
+  .socialMediaFooter {
+    top: -11px;
+    position: relative;
+    flex-direction: row;
+    right: revert;
+    display: flex;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 226px) {
+  /* .cartarea button {
+    display: none;
+  }
+  .homediv1 .loginbtn{
+    display: block;
+  } */
+  .socialMediaFooter {
+    top: -8px;
+    font-size: 20px;
+  }
+}
