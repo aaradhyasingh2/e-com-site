@@ -1,0 +1,191 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  /* background-color: palevioletred; */
+}
+
+/* login page css below */
+
+.loginMainDiv {
+  width: 100%;
+  height: 585px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: pink;
+}
+.loginbox {
+  gap: 25px;
+  width: 30%;
+  height: 365px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+.loginbox h1 {
+  font-size: 35px;
+  padding: 25px 0px;
+}
+.loginbox input {
+  width: 82%;
+  border-radius: 5px;
+  padding: 8px 10px;
+  outline: none;
+  margin: 0px 35px;
+}
+.loginbox button {
+  width: 82%;
+  padding: 8px 10px;
+  font-size: 15px;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  border-style: none;
+  border-radius: 5px;
+  margin-top: -36px;
+  background-color: orangered;
+}
+.loginbox p {
+  width: 82%;
+  margin-top: -10px;
+  margin-left: 6px;
+  font-size: 15px;
+}
+.loginbox p a {
+  text-decoration: none;
+  color: red;
+  cursor: pointer;
+}
+.cartarea button {
+  /* display: none; */
+}
+#eyeicon {
+  position: relative;
+  right: -34%;
+  top: -14%;
+  height: 17px;
+  cursor: pointer;
+}
+
+/* responsive css */
+@media(max-width:1024px){
+  /* .loginMainDiv{
+    height: 100vh;
+  } */
+  .loginbox{
+    width: 45%;
+  }
+}
+@media(max-width:768px){
+  .loginbox{
+    width: 50%;
+  }
+}
+
+@media (max-width: 425px) {
+  .loginMainDiv{
+    height: 100vh;
+  }
+  .loginbox {
+    gap: 25px;
+    width: 80%;
+    height: 335px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    /* align-items: center; */
+    /* justify-content: center; */
+  }
+  .loginbox h1 {
+    padding: 13px 0px;
+  }
+  .loginbox p {
+    width: 82%;
+    margin-top: -20px;
+    margin-left: 5px;
+    font-size: 15px;
+  }
+  #eyeicon {
+    position: relative;
+    right: -34%;
+    top: -15.5%;
+    height: 17px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 320px) {
+  .loginbox {
+    gap: 25px;
+    width: 80%;
+    height: 335px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    /* align-items: center; */
+    /* justify-content: center; */
+  }
+  .loginbox h1 {
+    font-size: 35px;
+    padding: 20px 0px;
+  }
+  .loginbox p {
+    width: 82%;
+    margin-top: -16px;
+    margin-left: 12px;
+    font-size: 15px;
+  }
+  #eyeicon {
+    position: relative;
+    right: -34%;
+    top: -15.5%;
+    height: 17px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 259px) {
+  .loginbox {
+    gap: 30px;
+    width: 80%;
+    height: 335px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    /* align-items: center; */
+    /* /* justify-content: center; */
+  }
+  .loginbox h1 {
+    padding: 12px 0px;
+  }
+  .loginbox p {
+    width: 82%;
+    margin-top: -25px;
+    margin-left: 6px;
+    font-size: 15px;
+  }
+  #eyeicon {
+    position: relative;
+    right: -31%;
+    top: -16.5%;
+    height: 17px;
+    cursor: pointer;
+  }
+}

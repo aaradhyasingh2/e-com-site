@@ -4,14 +4,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAmazon, faFacebook, faInstagram, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
+    
+    const handleClick = () => {
+        alert("you subscribe this site to get monthly updates!")
+    }
+
     return (
         <>
             <div className="footerMain">
                 <div className="footer1">
                     <h5>Our eCom</h5>
                     <input type="text" placeholder='enter your email' />
-                    <button>Subscribe</button>
-                    {/* <br /> <br /> <br /> */}
+                    <button onClick={handleClick}>Subscribe</button>
                     <p>To get monthly updates.</p>
                 </div>
                 <div className="footer2">
