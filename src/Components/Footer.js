@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './css/eCom.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAmazon, faFacebook, faInstagram, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
-    
+    const [userMail, setUserMail] = useState('');
+
     const handleClick = () => {
-        alert("you subscribe this site to get monthly updates!")
+        if (userMail.trim() === '') {
+            alert('enter your mail');
+        }
+        else {
+            alert("you subscribe this site to get monthly updates!")
+        }
     }
 
     return (
@@ -14,7 +20,7 @@ const Footer = () => {
             <div className="footerMain">
                 <div className="footer1">
                     <h5>Our eCom</h5>
-                    <input type="text" placeholder='enter your email' />
+                    <input type="email" placeholder='enter your email' value={userMail} onChange={(e)=>setUserMail(e.target.value)} required />
                     <button onClick={handleClick}>Subscribe</button>
                     <p>To get monthly updates.</p>
                 </div>
@@ -38,9 +44,9 @@ const Footer = () => {
                 <div className="footer4">
                     <h5>Contact Us</h5>
                     <ul>
-                    <p>Phone no: +91 412798436</p>
-                    <p>Email: eComm@gmail.com</p>
-                    <p>Address: 1234 Street Name City, XY 8888</p>
+                        <p>Phone no: +91 412798436</p>
+                        <p>Email: eComm@gmail.com</p>
+                        <p>Address: 1234 Street Name City, XY 8888</p>
                     </ul>
                 </div>
                 <div className="socialMediaFooter">

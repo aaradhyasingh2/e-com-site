@@ -31,7 +31,8 @@ body {
   text-decoration: none;
 }
 .navlink {
-  gap: 45px;
+  list-style: none;
+  gap: 40px;
   display: flex;
   flex-direction: row;
 }
@@ -41,7 +42,7 @@ body {
   text-decoration: none;
   transition: cubic-bezier(0.95, 0.05, 0.795, 0.035);
 }
-.navlink a:hover{
+.navlink a:hover {
   transition: cubic-bezier(0.95, 0.05, 0.795, 0.035);
   border-bottom: 2px solid orangered;
 }
@@ -57,7 +58,7 @@ body {
   padding: 7px 30px;
   border-radius: 55px;
 }
-.cartarea button:hover{
+.cartarea button:hover {
   color: white;
   background-color: orangered;
 }
@@ -142,15 +143,49 @@ body {
     padding: 8px 30px;
     border-radius: 55px;
   }
+  .cartarea {
+    gap: 10px;
+    padding: 0px 5px;
+  }
   .menuBar {
     display: block;
   }
-  .cartarea {
-    gap: 10px;
+  .active .menuBar {
+    display: none;
+    font-size: 4.2rem;
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    z-index: 9999;
   }
-  /* .closeMenuBar {
-      display: block;
-    } */
+  .active .closeMenuBar {
+    display: inline-block;
+    z-index: 9999;
+  }
+  .navlink {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 65px;
+    right: 0;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.2s linear;
+  }
+  .active .navlink {
+    visibility: visible;
+    opacity: 1;
+    z-index: 999;
+    transform: rotateX(0);
+    transform-origin: right;
+    transition: all 0.2s linear;
+  }
 }
 
 /* Footer CSS */
@@ -194,7 +229,7 @@ body {
   border-radius: 15px;
   padding: 6px 12px;
 }
-.footer1 button:hover{
+.footer1 button:hover {
   cursor: pointer;
   background-color: orangered;
 }
@@ -712,7 +747,7 @@ body {
     /* height: 100%; */
   }
   .socialMediaFooter {
-    top: -45px;
+    top: -20px;
     position: relative;
     flex-direction: row;
     gap: 17px;
@@ -737,3 +772,97 @@ body {
     right: 1px;
   }
 }
+
+/* ContactPage css */
+
+.contact-container {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 25px 25px;
+  /* background-color: #f4f4f4; */
+  background-color: black;
+  border-radius: 8px;
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: grid;
+  grid-gap: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #007bff;
+  color: black;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: orangered;
+}
+
+/* Additional styles for the email input */
+input[type='email'] {
+  /* Add any specific styling for the email input here */
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    margin: 48px 50px;
+  }
+}
+
+@media (max-width: 425px) {
+  .contact-container {
+    margin: 20px 50px;
+  }
+}
+@media (max-width: 375px) {
+  .contact-container {
+    margin: 41px 30px;
+  }
+}
+
+/* AboutPage css */
+.about-page {
+  max-width: 800px;
+  margin: 61px auto;
+  padding: 20px;
+}
+
+h2 {
+  padding: 16px 0px;
+  /* color: #333; */
+}
+
+p {
+  /* color: #666; */
+  line-height: 1.5;
+}
+
+/* a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+} */

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../css/product.css';
-import { faHeart } from '@fortawesome/free-regular-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faHeart } from '@fortawesome/free-regular-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import phone from '../images/phone.jpg';
 import camera from '../images/camera.jpg';
 import Laptop from '../images/laptop.jpg';
@@ -9,10 +9,10 @@ import speaker from '../images/speaker.jpg';
 import menjacket from '../images/camera.jpg';
 import phone1 from '../images/phone.jpg';
 import menjacket2 from '../images/camera.jpg';
-import menjacket3 from '../images/camera.jpg';
 import speaker1 from '../images/speaker.jpg';
 
-const Product = () => {
+
+const ProductPage = () => {
 
     const dataBox = [
         {
@@ -85,4 +85,4 @@ const Product = () => {
     )
 }
 
-export default Product;
+export default ProductPage;
