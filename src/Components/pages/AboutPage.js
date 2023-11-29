@@ -4,7 +4,7 @@ import '../css/eCom.css';
 const AboutPage = () => {
   return (
     <div className="about-page">
-      <h2 style={{ fontWeight: '800', fontSize: '35px' }}>Welcome to Our E-Commerce Store</h2>
+      <h2 style={{ fontWeight: '800', fontSize: '25px' }}>Welcome to Our E-Commerce Store</h2>
       <p>
         At our e-commerce store, we are committed to providing you with a
         seamless and enjoyable shopping experience. Our mission is to offer a

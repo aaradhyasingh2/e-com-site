@@ -6,6 +6,9 @@ import ProductPage from './Components/pages/ProductPage';
 import AboutPage from './Components/pages/AboutPage';
 import ContactPage from './Components/pages/ContactPage';
 import Footer from './Components/Footer';
+import LoginPage from './Components/pages/loginPage';
+import SignupPage from './Components/pages/signupPage';
+import CartPage from './Components/pages/CartPage';
 
 const App = () => {
   return (
@@ -13,9 +16,13 @@ const App = () => {
       <Navbar />
       <Switch>
         <Route path="/" exact component={HomePage} />
+        <Route path="/home" exact component={HomePage} />
         <Route path="/products" component={ProductPage} />
         <Route path="/about" component={AboutPage} />
         <Route path="/contact" component={ContactPage} />
+        <Route path="/login" component={LoginPage} />
+        <Route path="/signup" component={SignupPage} />
+        <Route path="/cart" component={CartPage} />
       </Switch>
       <Footer />
     </Router>

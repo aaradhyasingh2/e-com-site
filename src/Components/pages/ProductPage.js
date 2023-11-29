@@ -1,78 +1,83 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import '../css/product.css';
 // import { faHeart } from '@fortawesome/free-regular-svg-icons';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import phone from '../images/phone.jpg';
-import camera from '../images/camera.jpg';
-import Laptop from '../images/laptop.jpg';
-import speaker from '../images/speaker.jpg';
-import menjacket from '../images/camera.jpg';
-import phone1 from '../images/phone.jpg';
-import menjacket2 from '../images/camera.jpg';
-import speaker1 from '../images/speaker.jpg';
-
+// import phone from '../images/phone.jpg';
+// import camera from '../images/camera.jpg';
+// import Laptop from '../images/laptop.jpg';
+// import speaker from '../images/speaker.jpg';
+// import menjacket from '../images/camera.jpg';
+// import phone1 from '../images/phone.jpg';
+// import menjacket2 from '../images/camera.jpg';
+// import speaker1 from '../images/speaker.jpg';
 
 const ProductPage = () => {
 
-    const dataBox = [
-        {
-            productName: 'laptop',
-            imgUrl: Laptop,
-            price: '$23.99'
-        },
-        {
-            productName: 'camera',
-            imgUrl: camera,
-            price: '$12.58'
-        },
-        {
-            productName: 'phone',
-            imgUrl: phone,
-            price: '$33.80'
-        },
-        {
-            productName: 'speaker',
-            imgUrl: speaker,
-            price: '$12.54'
-        },
-        {
-            productName: 'camera',
-            imgUrl: menjacket,
-            price: '$2333',
-        },
-        {
-            productName: 'phone',
-            imgUrl: phone1,
-            price: '$2333',
-        },
-        {
-            productName: 'camera',
-            imgUrl: menjacket2,
-            price: '$2333',
-        },
-        {
-            productName: 'speaker',
-            imgUrl: speaker1,
-            price: '$2333',
-        }
-    ]
+    const [productData, setProductData] = useState([]);
+
+
+    // first way to call api using axios
+    useEffect(() => {
+        const apiFetchData = async () => {
+            try {
+                const res = await axios.get("https://fakestoreapi.com/products");
+                setProductData(res.data);
+                console.log(res.data);
+            } catch (error) {
+                console.log('error found: ', error);
+            }
+        };
+
+        apiFetchData();
+    }, [])
+
+
+    // second way to call api using axios
+    // const fetchData = async () => {
+    //     try {
+    //         const response = await axios.get("https://fakestoreapi.com/products");
+    //         setProductData(response.data);
+    //     } catch (error) {
+    //         console.log("Error found:", error);
+    //     }
+    // };
+    // useEffect(() => {
+    //     fetchData();
+    // }, []);
+
+
+    // third way to call api using axios 
+    // const getProductData = () => {
+    //     axios.get('https://fakestoreapi.com/products')
+    //         .then(
+    //             (myData) => {
+    //                 setProductData(myData.data)
+    //                 console.log(myData)
+    //             }
+    //         )
+    //         .catch(error => console.log('ERROR FOUND:', error));
+    // };
+    // getProductData();
 
     return (
         <>
             <div className="productmaincontainer">
                 {/* <h1>Product</h1> */}
                 {
-                    dataBox.map((user) => {
+                    productData.map((item) => {
                         return (
                             <>
-                                <div className="productcardsection">
+                                <div className="productcardsection" key={item.id}>
                                     <div className="productimagesection">
-                                        <img src={user.imgUrl} alt="imagenotfound" />
+                                        <img src={item.image} alt="imagenotfound" />
                                         {/* <FontAwesomeIcon icon={faHeart} id='hearticon' /> */}
                                     </div>
                                     <div className="producttxtsection">
-                                        <h5>{user.productName}</h5>
-                                        <p><span style={{ color: 'oranged' }}>{user.price}</span></p>
+                                        <h5>{item.title}</h5>
+                                        <p className="description">{item.description}</p>
+                                        <p>Rating:{item.rating.rate}, Count:{item.rating.count}</p>
+                                        <p>Price: $<span style={{ color: 'oranged' }}>{item.price}</span></p>
                                         <button>Add to cart</button>
                                     </div>
                                 </div>
