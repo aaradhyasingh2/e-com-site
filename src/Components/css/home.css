@@ -3,14 +3,13 @@ body {
   font-family: monospace;
 }
 .homeMainDiv {
+  /* height: 633px; */
   width: 100%;
-  height: 633px;
+  min-height: 100vh;
   display: flex;
-  /* line-height: 1; */
   padding: 0px 60px;
   align-items: center;
   color: black;
-  /* background-color: black; */
   background-color: #dcdee3;
   justify-content: space-between;
 }

@@ -75,9 +75,9 @@ const ProductPage = () => {
                                     </div>
                                     <div className="producttxtsection">
                                         <h5>{item.title}</h5>
-                                        <p className="description">{item.description}</p>
                                         <p>Rating:{item.rating.rate}, Count:{item.rating.count}</p>
-                                        <p>Price: $<span style={{ color: 'oranged' }}>{item.price}</span></p>
+                                        <h5>Price: $<span style={{ color: 'oranged' }}>{item.price}</span></h5>
+                                        <p className="description">{item.description}</p>
                                         <button>Add to cart</button>
                                     </div>
                                 </div>

@@ -9,13 +9,13 @@ import Footer from './Components/Footer';
 import LoginPage from './Components/pages/loginPage';
 import SignupPage from './Components/pages/signupPage';
 import CartPage from './Components/pages/CartPage';
+import ErrorPage from './Components/pages/ErrorPage';
 
 const App = () => {
   return (
     <Router>
       <Navbar />
       <Switch>
-        <Route path="/" exact component={HomePage} />
         <Route path="/home" exact component={HomePage} />
         <Route path="/products" component={ProductPage} />
         <Route path="/about" component={AboutPage} />
@@ -23,6 +23,7 @@ const App = () => {
         <Route path="/login" component={LoginPage} />
         <Route path="/signup" component={SignupPage} />
         <Route path="/cart" component={CartPage} />
+        <Route path="*" component={ErrorPage} />
       </Switch>
       <Footer />
     </Router>
