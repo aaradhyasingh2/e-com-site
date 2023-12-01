@@ -9,13 +9,14 @@ const HomePage = () => {
     const history = useHistory();
     const handleClick = () => {
         history.push('/login');
+        history.push('/product');
     }
     return (
         <>
             <div className="homeMainDiv">
                 <div className="homediv1">
                     <h1>EveryDay🤩<br />New collection for <br />you & your love one</h1>
-                    <button>Explore <FontAwesomeIcon icon={faArrowAltCircleRight} /></button>
+                    <button onClick={handleClick}>Explore <FontAwesomeIcon icon={faArrowAltCircleRight} /></button>
                     <button className='loginbtn' onClick={handleClick}>Login</button>
                 </div>
                 <div className="homediv2">

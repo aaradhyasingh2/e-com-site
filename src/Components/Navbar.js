@@ -23,7 +23,7 @@ const Navbar = () => {
         <div className={showMenuIcon ? 'mainNavBox active' : 'mainNavBox'}>
           <ul className="navlink">
             <li><Link to="/home" onClick={() => setShowMenuIcon(false)}>Home</Link></li>
-            <li><Link to="/products" onClick={() => setShowMenuIcon(false)}>Products</Link></li>
+            <li><Link to="/product" onClick={() => setShowMenuIcon(false)}>Products</Link></li>
             <li><Link to="/about" onClick={() => setShowMenuIcon(false)}>About</Link></li>
             <li><Link to="/contact" onClick={() => setShowMenuIcon(false)}>Contact</Link></li>
           </ul>
