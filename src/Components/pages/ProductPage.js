@@ -21,9 +21,14 @@ const ProductPage = () => {
         apiFetchData();
     }, []);
 
+    // const handleClickCart = (item) => {
+    //     console.log(item);
+    //     setAddCartProduct(item);
+    // };
+
     const handleClickCart = (item) => {
         console.log(item);
-        setAddCartProduct(item);
+        setAddCartProduct((prevProducts) => [...prevProducts, item]);
     };
 
     const handleReadMoreToggle = (id) => {
