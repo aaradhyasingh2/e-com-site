@@ -47,6 +47,7 @@ const App = () => {
           </div>
         ) : (
           <Switch>
+            <Route path="/" exact component={HomePage} />
             <Route path="/home" exact component={HomePage} />
             <Route
               path="/product"

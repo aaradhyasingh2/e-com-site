@@ -6,10 +6,11 @@ body {
 .cart-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: flex-start;
   gap: 20px;
   padding: 20px;
+  min-height: 100vh;
 }
 
 .heading {
@@ -29,9 +30,10 @@ body {
   align-items: center;
   justify-content: center;
   width: 45%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(253, 4, 4, 0.962);
   border-radius: 8px;
   overflow: hidden;
+  /* background-color: blue; */
   transition: transform 0.3s ease-in-out;
 }
 
