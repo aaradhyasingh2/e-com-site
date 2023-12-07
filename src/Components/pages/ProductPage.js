@@ -3,7 +3,7 @@ import axios from 'axios';
 import '../css/product.css';
 import { AppContext } from '../../Context/productContext';
 
-const ProductPage = () => {
+const ProductPage = ({setCountCartProduct}) => {
     const [productData, setProductData] = useState([]);
     const [addCartProduct, setAddCartProduct] = useContext(AppContext);
     const [showFullDescription, setShowFullDescription] = useState({});
@@ -29,6 +29,7 @@ const ProductPage = () => {
     const handleClickCart = (item) => {
         console.log(item);
         setAddCartProduct((prevProducts) => [...prevProducts, item]);
+        setCountCartProduct((prevCount) => prevCount + 1); //count cart item
     };
 
     const handleReadMoreToggle = (id) => {

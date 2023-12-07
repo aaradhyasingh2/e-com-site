@@ -4,7 +4,7 @@ import { Link, useHistory } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart, faBars, faClose } from '@fortawesome/free-solid-svg-icons';
 
-const Navbar = () => {
+const Navbar = ({ countCartProduct, setCountCartProduct }) => {
 
   const [showMenuIcon, setShowMenuIcon] = useState();
   const history = useHistory();
@@ -29,7 +29,7 @@ const Navbar = () => {
           </ul>
           <div className="cartarea">
             <button onClick={handleClickLoginBtn} style={{ cursor: 'pointer' }}>Login</button>
-            <p><FontAwesomeIcon icon={faShoppingCart} onClick={handleCartItem} style={{ cursor: 'pointer' }} />
+            <p><FontAwesomeIcon icon={faShoppingCart} onClick={handleCartItem} style={{ cursor: 'pointer' }} />{countCartProduct}
             </p>
             <div className="menuIconBox">
               <p className='menuBar'><FontAwesomeIcon icon={faBars} onClick={() => setShowMenuIcon(true)} /></p>

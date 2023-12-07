@@ -315,7 +315,6 @@ body {
     display: none;
   }
 }
-
 @media (max-width: 320px) {
   .cartarea button {
     display: none;

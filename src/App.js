@@ -24,6 +24,7 @@ const loadingContainer = {
 const App = () => {
   const [addCartProduct, setAddCartProduct] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [countCartProduct, setCountCartProduct] = useState(0);
 
   useEffect(() => {
     setTimeout(() => {
@@ -33,7 +34,7 @@ const App = () => {
 
   return (
     <Router>
-      {!loading && <Navbar />}
+      {!loading && <Navbar countCartProduct={countCartProduct} setCountCartProduct={setCountCartProduct} />}
       <AppContext.Provider value={[addCartProduct, setAddCartProduct]}>
         {loading ? (
           <div style={loadingContainer}>
@@ -52,7 +53,9 @@ const App = () => {
             <Route
               path="/product"
               render={(props) => (
-                <LoadingWrapper component={ProductPage} {...props} />
+                <LoadingWrapper component={ProductPage}
+                  setCountCartProduct={setCountCartProduct}
+                  {...props} />
               )}
             />
             <Route path="/about" component={AboutPage} />
