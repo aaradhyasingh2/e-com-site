@@ -5,7 +5,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowAltCircleRight } from '@fortawesome/free-regular-svg-icons';
 import ProductPage from './ProductPage';
 import { useHistory } from 'react-router-dom';
-const HomePage = () => {
+
+
+const HomePage = ({ setCountCartProduct }) => {
     const history = useHistory();
     const handleClick = () => {
         history.push('/login');
@@ -23,7 +25,7 @@ const HomePage = () => {
                     <img src={model2} alt="homepagesideimage" />
                 </div>
             </div>
-            <ProductPage />
+            <ProductPage setCountCartProduct={setCountCartProduct} />
         </>
     )
 }

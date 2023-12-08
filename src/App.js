@@ -48,8 +48,12 @@ const App = () => {
           </div>
         ) : (
           <Switch>
-            <Route path="/" exact component={HomePage} />
-            <Route path="/home" exact component={HomePage} />
+            <Route path="/" exact>
+              <HomePage setCountCartProduct={setCountCartProduct} />
+            </Route>
+            <Route path="/home" exact>
+              <HomePage setCountCartProduct={setCountCartProduct} />
+            </Route>
             <Route
               path="/product"
               render={(props) => (
@@ -62,7 +66,7 @@ const App = () => {
             <Route path="/contact" component={ContactPage} />
             <Route path="/login" component={LoginPage} />
             <Route path="/signup" component={SignupPage} />
-            <Route path="/cart" component={CartPage} />
+            <Route path="/cart" render={(props) => <CartPage setCountCartProduct={setCountCartProduct} {...props} />} />
             <Route component={ErrorPage} />
           </Switch>
         )}

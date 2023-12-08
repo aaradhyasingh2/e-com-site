@@ -14,7 +14,8 @@ const Navbar = ({ countCartProduct, setCountCartProduct }) => {
     history.push('/login')
   }
   const handleCartItem = () => {
-    history.push('/cart')
+    history.push('/cart');
+    setShowMenuIcon(false);
   }
   return (
     <>
@@ -29,7 +30,7 @@ const Navbar = ({ countCartProduct, setCountCartProduct }) => {
           </ul>
           <div className="cartarea">
             <button onClick={handleClickLoginBtn} style={{ cursor: 'pointer' }}>Login</button>
-            <p><FontAwesomeIcon icon={faShoppingCart} onClick={handleCartItem} style={{ cursor: 'pointer' }} />{countCartProduct}
+            <p><FontAwesomeIcon icon={faShoppingCart} onClick={handleCartItem} style={{ cursor: 'pointer' }} />({countCartProduct})
             </p>
             <div className="menuIconBox">
               <p className='menuBar'><FontAwesomeIcon icon={faBars} onClick={() => setShowMenuIcon(true)} /></p>

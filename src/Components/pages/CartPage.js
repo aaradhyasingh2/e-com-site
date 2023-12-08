@@ -4,10 +4,11 @@ import { faBagShopping } from '@fortawesome/free-solid-svg-icons';
 import { AppContext } from '../../Context/productContext';
 import '../css/cart.css';
 
-const CartPage = () => {
+const CartPage = ({ setCountCartProduct }) => {
   const [addCartProduct, setAddCartProduct] = useContext(AppContext);
   const [showFullTitle, setShowFullTitle] = useState({});
   const [showFullDescription, setShowFullDescription] = useState({});
+  
 
   const handleTitleToggle = (id) => {
     setShowFullTitle((prevShowFullTitle) => ({
@@ -37,6 +38,9 @@ const CartPage = () => {
 
   const handleRemoveFromCart = (id) => {
     setAddCartProduct((prevProducts) => prevProducts.filter((product) => product.id !== id));
+
+    // Update cart count in Navbar
+    setCountCartProduct((prevCount) => prevCount - 1);
   };
 
   return (
