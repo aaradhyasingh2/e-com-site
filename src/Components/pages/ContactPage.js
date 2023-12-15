@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import '../css/eCom.css';
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 const ContactPage = () => {
 
