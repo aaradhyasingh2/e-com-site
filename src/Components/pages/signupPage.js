@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-regular-svg-icons';
 import { useHistory } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const SignupPage = () => {
     const [password, setPassword] = useState('');
@@ -23,8 +25,9 @@ const SignupPage = () => {
         e.preventDefault();
         console.log('handleClickBtn called');
         if (password.trim() === '' || userEmail.trim() === '' || userName.trim() === '') {
-            alert('all section are required to fill');
+            toast.warn('all section are required to fill');
         } else {
+            toast.success(`you're Signup`)
             history.push('/home')
         }
     }

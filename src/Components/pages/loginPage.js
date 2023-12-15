@@ -4,6 +4,10 @@ import '../css/loginSignup.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-regular-svg-icons';
 import { Link, useHistory } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 
 const LoginPage = () => {
     const [password, setPassword] = useState('');
@@ -26,9 +30,27 @@ const LoginPage = () => {
 
     const handleClickBtn = () => {
         if (password.trim() === '' || username.trim() === '') {
-            alert('Both username and password are required.');
+            toast.warn('Both username and password are required.', {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
         } else {
-            alert('You are logged in!');
+            toast.success('You are logged in👍🏻', {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
             history.push('/home')
         }
     };

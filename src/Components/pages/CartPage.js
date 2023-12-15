@@ -3,12 +3,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBagShopping } from '@fortawesome/free-solid-svg-icons';
 import { AppContext } from '../../Context/productContext';
 import '../css/cart.css';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const CartPage = ({ setCountCartProduct }) => {
   const [addCartProduct, setAddCartProduct] = useContext(AppContext);
   const [showFullTitle, setShowFullTitle] = useState({});
   const [showFullDescription, setShowFullDescription] = useState({});
-  
+
 
   const handleTitleToggle = (id) => {
     setShowFullTitle((prevShowFullTitle) => ({
@@ -37,10 +39,12 @@ const CartPage = ({ setCountCartProduct }) => {
   };
 
   const handleRemoveFromCart = (id) => {
+    toast.success("product remove from the cart")
     setAddCartProduct((prevProducts) => prevProducts.filter((product) => product.id !== id));
 
     // Update cart count in Navbar
     setCountCartProduct((prevCount) => prevCount - 1);
+
   };
 
   return (

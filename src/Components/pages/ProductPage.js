@@ -2,8 +2,10 @@ import React, { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import '../css/product.css';
 import { AppContext } from '../../Context/productContext';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-const ProductPage = ({setCountCartProduct}) => {
+const ProductPage = ({ setCountCartProduct }) => {
     const [productData, setProductData] = useState([]);
     const [addCartProduct, setAddCartProduct] = useContext(AppContext);
     const [showFullDescription, setShowFullDescription] = useState({});
@@ -28,6 +30,7 @@ const ProductPage = ({setCountCartProduct}) => {
 
     const handleClickCart = (item) => {
         console.log(item);
+        toast.success("product successfully add in cart")
         setAddCartProduct((prevProducts) => [...prevProducts, item]);
         setCountCartProduct((prevCount) => prevCount + 1); //count cart item
     };
